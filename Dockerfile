@@ -23,6 +23,7 @@ RUN apt update \
         liblapack3 \
         graphicsmagick \
         liblas3 \
+        ghostscript \
         gmt-dcw=$GMT_DCW_VER$GMT_DCW_DEBIAN_SUBVER \
         gmt-gshhg=$GMT_GSHHG_VER$GMT_GSHHG_DEBIAN_SUBVER \
     && mkdir /gmt-build \
