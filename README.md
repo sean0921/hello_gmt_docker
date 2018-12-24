@@ -16,3 +16,14 @@ docker run sean0921/gmt gmt # append your commands here
 ```sh
 docker run sean0921/gmt:5.4.4 gmt # append your commands here
 ```
+
+* Test Lagacy (End-of-Life) GMT 4.5.x Release Version:
+```sh
+docker run sean0921/gmt:4 # append your gmt4 commands here
+```
+
+# Running Shell Scrpit in Docker
+```sh
+docker run -it -v $DIR_IN_HOST:$DIR_IN_DOCKER sean0921/gmt:$GMT_VERSION /bin/bash
+```
+and do your own commands in bash shell in docker
