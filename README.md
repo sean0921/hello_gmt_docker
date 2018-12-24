@@ -5,4 +5,14 @@
 
 ## How to use?
 
-I don't know, either. Let's Test
+* install [Docker](https://docs.docker.com) first
+
+* Test Current (Unreleased and Unstable) Version:
+```sh
+docker run sean0921/gmt gmt # append your commands here
+```
+
+* Test Latest Released Version (5.4.4):
+```sh
+docker run sean0921/gmt:5.4.4 gmt # append your commands here
+```
