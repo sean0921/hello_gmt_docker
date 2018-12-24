@@ -38,7 +38,9 @@ RUN apt update \
     && make install \
     && cd / && rm -rf gmt-build \
     && apt purge -y gcc cmake make \
-    && apt autoremove -y
+    && apt autoremove -y \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
 
 CMD ["gmt"]
 
