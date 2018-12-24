@@ -1,19 +1,17 @@
-FROM debian:buster
+FROM debian:jessie
 MAINTAINER sean0921
-ARG GMT_VER="5.4.4"
-ARG GMT_DEBIAN_SUBVER="+dfsg-3+b1"
-ARG GMT_DCW_VER="1.1.4"
-ARG GMT_DCW_DEBIAN_SUBVER="-2"
-ARG GMT_GSHHG_VER="2.3.7"
-ARG GMT_GSHHG_DEBIAN_SUBVER="-4"
+ARG GMT_VER="4.5.12"
+ARG GMT_DEBIAN_SUBVER="-1"
+ARG GMT_GSHHS_VER="2.2.0"
+ARG GMT_GSHHS_DEBIAN_SUBVER="-2"
 
 RUN apt update \
     && apt upgrade -y \
-    && apt autoremove -y \
-    && apt install -y --no-install-recommends \
-        gmt=$GMT_VER$GMT_DEBIAN_SUBVER \
-        gmt-dcw=$GMT_DCW_VER$GMT_DCW_DEBIAN_SUBVER \
-        gmt-gshhg=$GMT_GSHHG_VER$GMT_GSHHG_DEBIAN_SUBVER
+    && apt install --no-install-recommends -y \
+                    gmt \
+                    gmt-gshhs-low=$GMT_VER$GMT_DEBIAN_SUBVER \
+                    gmt-gshhs-high=$GMT_GSHHS_VER$GMT_GSHHS_DEBIAN_SUBVER \
+                    gmt-gshhs-full=$GMT_GSHHS_VER$GMT_GSHHS_DEBIAN_SUBVER
 
-CMD ["gmt"]
-
+ENV PATH=/usr/lib/gmt/bin/:$PATH
+CMD ["GMT"]
