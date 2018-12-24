@@ -11,6 +11,7 @@ RUN apt update \
     && apt upgrade -y \
     && apt autoremove -y \
     && apt install -y --no-install-recommends \
+        ghostscript \
         gmt=$GMT_VER$GMT_DEBIAN_SUBVER \
         gmt-dcw=$GMT_DCW_VER$GMT_DCW_DEBIAN_SUBVER \
         gmt-gshhg=$GMT_GSHHG_VER$GMT_GSHHG_DEBIAN_SUBVER
