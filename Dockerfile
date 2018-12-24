@@ -33,7 +33,7 @@ RUN apt update \
     && cmake -DGSHHG_ROOT="/usr/share/gmt-gshhg" \
              -DDCW_ROOT="/usr/share/gmt-dcw" \
              .. \
-    && make -j \
+    && make -j1 \
     && make install \
     && cd / && rm -rf gmt-build \
     && apt purge -y gcc cmake make \
