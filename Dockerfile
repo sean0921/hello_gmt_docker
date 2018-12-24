@@ -8,7 +8,7 @@ RUN apt update \
     && apt upgrade -y \
     && apt install --no-install-recommends -y \
                     gmt=$GMT_VER$GMT_DEBIAN_SUBVER \
-                    gmt-gshhs-low$GMT_GSHHS_VER$GMT_GSHHS_DEBIAN_SUBVER \
+                    gmt-gshhs-low=$GMT_GSHHS_VER$GMT_GSHHS_DEBIAN_SUBVER \
                     gmt-gshhs-high=$GMT_GSHHS_VER$GMT_GSHHS_DEBIAN_SUBVER \
                     gmt-gshhs-full=$GMT_GSHHS_VER$GMT_GSHHS_DEBIAN_SUBVER
 ENV PATH=/usr/lib/gmt/bin/:$PATH
