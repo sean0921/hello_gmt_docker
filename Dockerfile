@@ -16,4 +16,3 @@ RUN apt update \
         gmt-gshhg=$GMT_GSHHG_VER$GMT_GSHHG_DEBIAN_SUBVER
 
 CMD ["gmt"]
-
