@@ -17,7 +17,7 @@ docker run sean0921/gmt gmt # append your commands here
 docker run sean0921/gmt:5 gmt # append your commands here
 ```
 
-* Test Lagacy (End-of-Life) GMT 4.5.x Release Version:
+* Test Lagacy (End-of-Life) GMT 4.x Release Version:
 ```sh
 docker run sean0921/gmt:4 # append your gmt4 commands here
 ```
